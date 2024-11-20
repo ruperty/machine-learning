@@ -5,6 +5,7 @@ import tensorflow as tf
 import numpy as np
 import gym
 
+
 # create a gym environment
 env = gym.make('CartPole-v1')
 
