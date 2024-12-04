@@ -28,8 +28,12 @@ model.compile(optimizer='adam', loss='categorical_crossentropy')
 # create a training loop
 for i in range(1000):
     # get the current state
-    state = env.reset()
-    state = np.reshape(state, [1, input_size])
+    state, info = env.reset()
+    print(state)
+    # print(state[0])
+    # state = np.reshape(state, [1, input_size])
+    state = np.reshape(state, (None,input_size))
+    print(state)
     done = False
     total_reward = 0
     
